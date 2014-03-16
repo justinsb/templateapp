@@ -12,6 +12,6 @@ public class PingEndpoint {
 
     @GET
     public String doPing() throws IOException {
-        return "ping";
+        return "pong";
     }
 }

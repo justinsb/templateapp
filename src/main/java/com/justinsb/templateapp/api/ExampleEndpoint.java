@@ -6,6 +6,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 
 import com.justinsb.templateapp.services.LogicService;
 
@@ -16,7 +17,7 @@ public class ExampleEndpoint {
     LogicService logic;
 
     @GET
-    public String getMarket(String request) throws IOException {
+    public String getMarket(@QueryParam("r") String request) throws IOException {
         return logic.process(request);
     }
 }

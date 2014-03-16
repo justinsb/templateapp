@@ -17,7 +17,7 @@ public class ExampleEndpoint {
     LogicService logic;
 
     @GET
-    public String getMarket(@QueryParam("r") String request) throws IOException {
+    public String getExample(@QueryParam("r") String request) throws IOException {
         return logic.process(request);
     }
 }
